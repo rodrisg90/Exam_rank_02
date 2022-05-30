@@ -5,7 +5,6 @@ void    ft_write_nb(int nb)
     if (nb > 9)
         ft_write_nb(nb / 10);
     write (1, &"0123456789"[nb % 10], 1);
-
 }
 
 int main(void)
