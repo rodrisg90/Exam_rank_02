@@ -16,9 +16,9 @@ unsigned char	reverse_bits(unsigned char octet)
 	return (result);
 }
 
-/*int main(void)
+/*int     main()
 {
-    unsigned int x = 3;
-    printf("%u", reverse_bits(x));
-    getchar();
-}*/
+	printf("%d", reverse_bits(38));
+	return (0);
+}
+*/
