@@ -1,27 +1,31 @@
 #include <stdlib.h>
 /*#include <stdio.h>*/
 
+int	absolute_value(int n)
+{
+	if (n < 0)
+		return (n * -1);
+	return (n);
+}
+
 int	*ft_range(int start, int end)
 {
 	int	size;
 	int	*ret;
-	int	*ptr;
+	int	i;
 
-	size = end - start;
-	if (size)
+	i = 0;
+	size = absolute_value(end - start) + 1;
+	ret = (int *)malloc(sizeof(int) * size);
+	if (ret)
 	{
-		ptr = (int *)malloc(sizeof(int) * size);
-		if (ptr)
+		while (start <= end)
 		{
-			ret = ptr;
-			while (start <= end)
-			{
-				*ptr = start;
-				ptr++;
-				start++;
-			}
-			return (ret);
+			ret[i] = start;
+			i++;
+			start++;
 		}
+		return (ret);
 	}
 	return (NULL);
 }
